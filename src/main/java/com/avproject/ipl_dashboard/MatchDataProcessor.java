@@ -24,8 +24,8 @@ public class MatchDataProcessor  implements ItemProcessor<MatchInput, Match> {
         match.setDate(LocalDate.parse(matchInput.getDate()));
         match.setPlayerOfMatch(matchInput.getPlayer_of_match());
         match.setVenue(matchInput.getVenue());
-        
 
+   
 
         return match;
     }

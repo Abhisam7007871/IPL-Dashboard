@@ -10,6 +10,7 @@ public class Match {
     private LocalDate date;
     //private String match_type;
     private String playerOfMatch;
+    
     private String venue;
     private String team1;
     private String team2;
