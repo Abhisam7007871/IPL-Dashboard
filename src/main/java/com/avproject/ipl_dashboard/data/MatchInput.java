@@ -1,4 +1,4 @@
-package com.avproject.ipl_dashboard;
+package com.avproject.ipl_dashboard.data;
 
 public class MatchInput {
     private String id;
@@ -67,7 +67,7 @@ public class MatchInput {
         return player_of_match;
     }
 
-    
+
     public void setPlayer_of_match(String player_of_match) {
         this.player_of_match = player_of_match;
     }
