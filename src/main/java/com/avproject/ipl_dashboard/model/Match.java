@@ -2,13 +2,18 @@ package com.avproject.ipl_dashboard.model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Match {
 
+    @Id
     private long id;
-    //private String season;
+    
     private String city;
     private LocalDate date;
-    //private String match_type;
+   
     private String playerOfMatch;
 
     private String venue;
@@ -19,12 +24,12 @@ public class Match {
     private String matchWinner;
     private String result;
     private String resultMargin;
-//    private String target_runs;
-//    private String target_overs;
-//    private String super_over;
-//    private String method;
+
     private String umpire1;
     private String umpire2;
+
+
+    
     public void setVenue(String venue2) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setVenue'");
