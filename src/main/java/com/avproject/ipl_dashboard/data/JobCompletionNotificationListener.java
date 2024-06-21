@@ -31,4 +31,10 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
           .forEach(str -> System.out.println(str));
     }
   }
+
+@Override
+public void beforeJob(JobExecution jobExecution) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'beforeJob'");
+}
 }

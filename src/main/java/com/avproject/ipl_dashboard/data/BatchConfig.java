@@ -76,9 +76,13 @@ public class BatchConfig {
                 .build();
     }
 
+
+
+
+    
     @Bean
     public Job importUserJob( Step step1, JobCompletionNotificationListener listener) {
-        return  JobBuilder("importUserJob")
+        return new JobBuilder("importUserJob")
                 .listener(listener)
                 .start(step1)
                 .build();
@@ -87,8 +91,8 @@ public class BatchConfig {
     @Bean
     public Step step1(JobRepository jobRepository, DataSourceTransactionManager transactionManager,
             FlatFileItemReader<Match> reader, MatchDataProcessor processor, JdbcBatchItemWriter<Match> writer) {
-        return  StepBuilder("step1", jobRepository)
-                .<MatchInput, Match>chunk(10, transactionManager)
+        return new StepBuilder("step1")
+                .<MatchInput, Match>chunk(10)
                 .reader(reader())
                 .processor(processor)
                 .writer(writer)
